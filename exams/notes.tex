@@ -1,0 +1,56 @@
+\documentclass{extarticle}
+% \usepackage[french, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[affil-it]{authblk}
+\usepackage{graphicx}
+\title{Notes du contrôle continu de Algorithmes et Programmation orientée objet.}
+
+\author{M. LIEDJI WENKACK D.%
+  \thanks{Electronic address: \texttt{liedjiwenkack@gmail.com}; Corresponding author}}
+\affil{University of Dschang, Cameroon\\ Universite Internationale Jean Paul 2 De Bafang}
+
+\date{Dated: \today}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\Large\bfseries \@title \par}%
+    \vskip 1.5em%
+    {\normalsize
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+    {\normalsize \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+\makeatother
+
+\begin{document}
+\maketitle
+\begin{table}[ht!]
+  \begin{center}
+    \begin{tabular}[t]{| l | c | r }
+      \hline
+      Etudiant                        & Moyenne/20 \\ \hline
+      DJATSA LADZOU RUSSEL            & 19         \\ \hline
+      TCHATCHOUA Bonaventure Robinson & 15         \\ \hline
+      MOMI LEUDJIE Orphey Virgil      & 14         \\ \hline
+      KAMAGO SEWA Forain Macaire      & 13         \\ \hline
+      KWENY NGALANI André Braun       & 13         \\ \hline
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Moyenne sur 20 de chaque étudiant.}
+\end{table}
+
+\includegraphics[scale=0.3, trim=0.5cm 12cm 2cm 5cm, clip=true]{figs/signed.pdf}
+
+\end{document}

@@ -1,0 +1,28 @@
+\section*{Problème : \scriptsize{(0.75+0.75+0.75+0.75+0.75*4+0.75x2+0.75+0.75+0.75+0.75+0.75x2=12 points)} }
+
+\begin{enumerate}
+      \item {Classe Complexes permettant de représenter des nombres complexes. \lstinputlisting[language=Caml]{code/code01.cpp}}
+      \item {Définition d'un constructeur par défaut sans
+            paramètre permettant d’initialiser les deux
+            parties du nombre à 0. \lstinputlisting[language=Caml, firstline=11, lastline=18]{code/code02.cpp}}
+            \newpage
+      \item {Définition du constructeur d’initialisation pour la classe. \lstinputlisting[language=Caml, firstline=19, lastline=25]{code/code02.cpp}}
+      \item {Définition d'un constructeur public \textbf{Complexe(Complexe c)} permettant de créer une copie du Complexe passé en argument. \lstinputlisting[language=Caml, firstline=25, lastline=33]{code/code02.cpp}}
+            \newpage
+      \item {Écriture des méthodes publiques \textit{public Complexe plus(Complexe c),public Complexe fois(Complexe c),public Complexe divise(Complexe c)}, et \textit{public double module()} qui implémentent les opérations algébriques classiques sur les nombres complexes (la racine carrée est
+            donnée par \textit{sqrt(double d)}). \lstinputlisting[language=Caml, firstline=33, lastline=68]{code/code02.cpp}}
+            \newpage
+      \item {Ajoutons des méthodes \textbf{plus}, et \textbf{fois} qui prennent des \textbf{double} en paramètres.  \lstinputlisting[language=Caml, firstline=68, lastline=84]{code/code02.cpp}}
+      \item {Écrivons une méthode \textbf{afficher()} qui donne une représentation d'un nombre complexe comme suit : $a+b*i$.  \lstinputlisting[language=Caml, firstline=84, lastline=90]{code/code02.cpp}}
+      \item {Écrivons une méthode \textbf{bool egal(Complexe c)} permettant de comparer 2 complexes. Utiliser \textbf{"=="} pour faire une comparaison  \lstinputlisting[language=Caml, firstline=90, lastline=96]{code/code02.cpp}}
+      \item {Ajoutons une méthode \textbf{toString()} renvoyant une représentation sous forme de chaine de caractère du Complexe courant.  \lstinputlisting[language=Caml, firstline=96, lastline=102]{code/code02.cpp}}
+      \item {Écrivons une méthode \textbf{void swap(Complexe c1, Complexe c2)} permettant de permuter c1 et c2. Par exemple, on voudrait que le code suivant : Complexe c1=new Complexe(1, 1); Complexe c2=new Complexe(2,2); Complexe.swap(c1,c2) Complexe.affiche()  affichera $2+2i$  \lstinputlisting[language=Caml, firstline=102, lastline=110]{code/code02.cpp}  \textbf{Oui}, nous pouvons écrire une telle méthode pour permuter des entiers.}
+      \item {Écrivons des méthodes \textbf{conjugue()} et \textbf{inverse()} qui transforment un complexe en son conjugué ou en son inverse. NB : ces méthodes ne retournent rien : elles modifient juste le Complexe sur lequel elles sont appelées.  \lstinputlisting[language=Caml, firstline=110, lastline=125]{code/code02.cpp}}
+\end{enumerate}
+% \newpage
+% \subsection*{Bonus code du main pour les tests.}
+% \lstinputlisting[language=Caml, firstline=0, lastline=3]{code/code02.cpp}
+% \lstinputlisting[language=Caml, firstline=125, lastline=141]{code/code02.cpp}
+% \newpage
+% \subsection*{Programme complet.}
+% \lstinputlisting[language=Caml]{code/code02.cpp}

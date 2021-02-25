@@ -1,0 +1,113 @@
+\documentclass{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[affil-it]{authblk}
+\usepackage{graphicx}
+
+\title{Correction du contrôle continu de Algorithmes et Programmation orientée objet.}
+
+\author{M. LIEDJI WENKACK D.%
+  \thanks{Electronic address: \texttt{liedjiwenkack@gmail.com}; Corresponding author}}
+\affil{University of Dschang, Cameroon\\ Universite Internationale Jean Paul 2 De Bafang}
+
+\date{Dated: \today}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\Large\bfseries \@title \par}%
+    \vskip 1.5em%
+    {\normalsize
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+    {\normalsize \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+\makeatother
+
+\begin{document}
+\maketitle
+
+\section*{Exercice 1: \scriptsize{Questions de cours (1+0.5x5+1+1+1=6 points)}}
+\begin{enumerate}
+      \item Les extensions d'un fichier source C++ sont : .cpp et .h.
+      \item Definitions des concepts:
+            \begin{itemize}
+                  \item \textbf{Programmation orientée objet} c'est un paradigme de programmation inventé au
+                        début des années 1960 consitant en la définition et l'interaction de briques logicielles appelées objets.
+                  \item \textbf{Un objet est une structure informatique regroupant} :
+                        \begin{itemize}
+                              \item des variables, caractérisant l’état de l’objet,
+                              \item des fonctions, caractérisant le comportement de l’objet.
+                        \end{itemize}
+                  \item \textbf{Classe}:  Une classe est un ensemble d'ojets de même type.
+                  \item \textbf{Polymorphisme}: c'est la capacité d'un l'objet à
+                        posséder plusieurs formes.
+                  \item \textbf{Héritage}: C'est un mécanisme de la programmation orientée objet qui permet de créer des classes dites filles à partir des caractéristique et méthodes des classes existantes dites parentes.
+            \end{itemize}
+      \item Signification des mots clés:
+            \begin{itemize}
+                  \item \textbf{Virtual}: signifie que toute fonction-membre de la classe de base doit être surchargée (c'est-à-dire redéfinie) dans une classe
+                        dérivée.
+                  \item \textbf{Private}: signifie que les propriétés et méthodes d'une classe sont privées à cette classe et inaccéssible depuis l'exterieur.
+            \end{itemize}
+      \item La sortie du code est: \textbf{15}.
+\end{enumerate}
+\section*{Exercice 2 \scriptsize{(choisir la(les) bonne(s) reponse(s)):(0.25x8=2pts)}}
+
+\begin{enumerate}
+      \item c)une instance / la classe
+      \item b) type dynamique / type statique
+      \item b)Square/Shape
+      \item a)*p = a;
+      \item a)Avant
+      \item b)après
+      \item {peut contenir au moins constructeurs---Il n'est pas nécessaire de définir explicitement un constructeur ; cependant, toutes les classes doivent avoir au moins un constructeur. Un constructeur vide par défaut sera généré si vous n'en fournissez pas .}
+      \item d)du nombre ou du type de leurs paramètres.
+\end{enumerate}
+
+\section*{Problème : \scriptsize{(0.75+0.75+0.75+0.75+0.75*4+0.75x2+0.75+0.75+0.75+0.75+0.75x2=12 points)} }
+
+\begin{enumerate}
+      \item {Classe Complexes permettant de représenter des nombres complexes. \lstinputlisting[language=Caml]{code/code01.cpp}}
+      \item {Définition d'un constructeur par défaut sans
+            paramètre permettant d’initialiser les deux
+            parties du nombre à 0. \lstinputlisting[language=Caml, firstline=11, lastline=18]{code/code02.cpp}}
+            \newpage
+      \item {Définition du constructeur d’initialisation pour la classe. \lstinputlisting[language=Caml, firstline=19, lastline=25]{code/code02.cpp}}
+      \item {Définition d'un constructeur public \textbf{Complexe(Complexe c)} permettant de créer une copie du Complexe passé en argument. \lstinputlisting[language=Caml, firstline=25, lastline=33]{code/code02.cpp}}
+            \newpage
+      \item {Écriture des méthodes publiques \textit{public Complexe plus(Complexe c),public Complexe fois(Complexe c),public Complexe divise(Complexe c)}, et \textit{public double module()} qui implémentent les opérations algébriques classiques sur les nombres complexes (la racine carrée est
+            donnée par \textit{sqrt(double d)}). \lstinputlisting[language=Caml, firstline=33, lastline=68]{code/code02.cpp}}
+            \newpage
+      \item {Ajoutons des méthodes \textbf{plus}, et \textbf{fois} qui prennent des \textbf{double} en paramètres.  \lstinputlisting[language=Caml, firstline=68, lastline=84]{code/code02.cpp}}
+      \item {Écrivons une méthode \textbf{afficher()} qui donne une représentation d'un nombre complexe comme suit : $a+b*i$.  \lstinputlisting[language=Caml, firstline=84, lastline=90]{code/code02.cpp}}
+      \item {Écrivons une méthode \textbf{bool egal(Complexe c)} permettant de comparer 2 complexes. Utiliser \textbf{"=="} pour faire une comparaison  \lstinputlisting[language=Caml, firstline=90, lastline=96]{code/code02.cpp}}
+      \item {Ajoutons une méthode \textbf{toString()} renvoyant une représentation sous forme de chaine de caractère du Complexe courant.  \lstinputlisting[language=Caml, firstline=96, lastline=102]{code/code02.cpp}}
+      \item {Écrivons une méthode \textbf{void swap(Complexe c1, Complexe c2)} permettant de permuter c1 et c2. Par exemple, on voudrait que le code suivant : Complexe c1=new Complexe(1, 1); Complexe c2=new Complexe(2,2); Complexe.swap(c1,c2) Complexe.affiche()  affichera $2+2i$  \lstinputlisting[language=Caml, firstline=102, lastline=110]{code/code02.cpp}  \textbf{Oui}, nous pouvons écrire une telle méthode pour permuter des entiers.}
+      \item {Écrivons des méthodes \textbf{conjugue()} et \textbf{inverse()} qui transforment un complexe en son conjugué ou en son inverse. NB : ces méthodes ne retournent rien : elles modifient juste le Complexe sur lequel elles sont appelées.  \lstinputlisting[language=Caml, firstline=110, lastline=125]{code/code02.cpp}}
+\end{enumerate}
+\newpage
+\subsection*{Bonus code du main pour les tests.}
+\lstinputlisting[language=Caml, firstline=0, lastline=3]{code/code02.cpp}
+\lstinputlisting[language=Caml, firstline=125, lastline=141]{code/code02.cpp}
+\newpage
+\subsection*{Programme complet.}
+\lstinputlisting[language=Caml]{code/code02.cpp}
+
+\vspace{2cm}
+\huge{\textbf{La pratique rend parfait!}}
+
+\textit{Merci d'avoir lu jusqu'a la fin. }\\
+
+\includegraphics[scale=0.3, trim=0.5cm 12cm 2cm 5cm, clip=true]{figs/signed.pdf}
+
+\end{document}

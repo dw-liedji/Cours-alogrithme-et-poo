@@ -1,0 +1,25 @@
+\section*{Problème : \scriptsize{(0.75+0.75+0.75+0.75+0.75*4+0.75x2+0.75+0.75+0.75+0.75+0.75x2=12points)}}
+
+Dans ce problème, nous allons définir une classe Complexe qui permettra de manipuler des nombres complexes et d’implémenter ainsi certaines opérations algébriques standards.
+\begin{enumerate}
+    \item  Écrire une classe Complexes permettant de représenter des nombres complexes. Un nombre complexe Z comporte une partie réelle et une partie imaginaire : Z = PartieRéelle + PartieImaginaire * i
+          (On notera la parie reelle  re et la partie imaginaire im )
+    \item  Définir un constructeur par défaut sans paramètre permettant d’initialiser les deux parties du nombre à 0.
+    \item  Définir un constructeur d’initialisation pour la classe.
+    \item  Écrire un dernier constructeur public Complexe(Complexe c) permettant de créer une copie du Complexe passé en argument.
+    \item  Écrire des méthodes publiques public Complexe plus(Complexe c),public Complexe fois(Complexe c),public Complexe divise(Complexe c),et public double module() qui implémentent les opérations algébriques classiques sur les nombres complexes (la racine carrée est donnée par sqrt(double d)).
+    \item Ajouter des méthodes plus, et fois qui prennent des double en paramètres.
+    \item Écrire une méthode afficher ( ) qui donne une représentation d'un nombre complexe comme suit : a+b*i.
+
+    \item Écrire une méthode bool egal(Complexe c) permettant de comparer 2 complexes. Utilisez "==" pour faire une comparaison.
+    \item Ajouter une méthode  toString() renvoyant une représentation sous forme de chaine de caractère du Complexe courant
+    \item Écrire une méthode  void swap(Complexe c1, Complexe c2) permettant de permuter c1 et c2. Par exemple, on voudrait que le code suivant :
+          Complexe c1=new Complexe(1, 1);
+          Complexe c2=new Complexe(2,2);
+          Complexe.swap(c1,c2)
+
+          Complexe.affiche(c1); affiche    2+2i
+          Pourrait-on  écrire une telle méthode pour permuter des entiers ?
+    \item  Écrire des méthodes  conjugue() et inverse()qui transforment un complexe en son conjugué ou en son inverse.
+          NB : ces méthodes ne retournent rien : elles modifient juste le Complexe sur lequel elles sont appelées.
+\end{enumerate}
